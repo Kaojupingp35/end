@@ -1,0 +1,109 @@
+
+header,section,footer,nav,article,aside,figure,figcaption{display: block ; font-family:Microsoft JhengHei;}
+body{
+    color: #666666;
+    background-color: #f9f8f6;
+    background-image: url(images/n.jpg);
+    background-position: center;
+    margin: 0px;}
+
+.wrapper{
+    height: 1400px;
+    width: 940px;
+    margin: 20px auto 20px auto;
+    border: 2px solid #000000;
+    background-color: #ffffff;}
+
+header{
+    height: 150px;
+    background-image: url(images/img.jpg);}
+h2{
+    font-family:  Microsoft JhengHei;
+    padding-top: 75px;
+    text-indent: 85px;
+    width: 940px;
+    height: 130px;
+    margin: 0px;
+    color: brown}
+
+nav,footer{
+    clear: both;
+    color: #ffffff;
+    background-color: lightyellow;
+    height: 30px;}
+
+nav ul{
+    margin: 0px;
+    padding: 5px 0px 5px 400px;}
+
+nav li{
+    display: inline;
+    margin-right: 40px;}
+
+nav li a{
+    color: black; }
+
+nav li a:hover, nav li a.current {color: crimson;}
+
+h3{
+    font-family:  Microsoft JhengHei;
+    height: 30px;
+    padding-left: 35px;
+    padding-bottom: 30px;
+    color: black}
+p{
+    font-family:  Microsoft JhengHei;
+    padding-left: 20px;}
+
+li{
+    display: inline;
+    margin: 0px 3px;}
+
+section.courses{
+    
+    float: left;
+    width: 720px;
+    height: 1200px;
+    border-right: 1px solid #eeeeee}
+
+
+
+
+
+article{
+    clear: both;
+    overflow: auto;
+    width: 100%;}
+
+
+
+figure{
+    display: left;
+    width: 750px;
+    height: 560px;
+    padding: 5px;
+    margin: 20px;
+   }
+
+img.align-left{
+    float: left;
+    margin-right: 10px;
+}
+
+div{
+    padding-top: 5px;
+    padding: 15px;
+    margin: 60px;
+}
+
+h4,h5{font-weight: normal;}
+h4{margin: 50px 0px 5px 35px;
+padding: 0px;}
+h5{margin: 0px 0px 10px 15px;}
+
+
+footer{
+    color: black;
+    padding-left: 20px;
+    padding-bottom: 0px;
+}

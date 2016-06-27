@@ -1,0 +1,78 @@
+{
+    "html": {
+        "abbreviations": {
+            "meta:renderer": "meta[name=renderer][content=webkit]",
+            "meta:author": "meta[name=author][content=\"your name\"]",
+            "meta:keywords": "meta[name=keywords][content=\"Keyword 1,Keyword 2\"]",
+            "meta:description": "meta[name=description][content=description]",
+            "meta:viewport": "meta[name=viewport][content=\"width=device-width, initial-scale=1, maximum-scale=1.0\"]",
+            "meta:ie": "meta[http-equiv=\"X-UA-Compatible\"][content=\"IE=edge\"]",
+            "link:favicon": "link[rel=shortcut icon][type=image/x-icon][href=/favicon.ico]",
+            "link:touch": "link[rel=apple-touch-icon][href=\"\"]",
+            "meta5": "meta:viewport+meta:ie+meta:renderer",
+            "css:bs": "link[href=http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css]",
+            "css:pretty": "link[href=http://festatic.aliapp.com/css/google-prettyprint/bootstrap.css]",
+            "css:reset": "link[href=http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css]",
+            "jquery:v1": "script[src=https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js]",
+            "jquery:v2": "script[src=https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js]",
+            "js:bs": "script[src=http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js]",
+            "js:pretty": "script[src=https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js]",
+            "babel": "script[src=https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js]",
+            "react": "script[src=https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react.min.js]",
+            "react-dom": "script[src=https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react-dom.min.js]",
+            "react-addons": "script[src=https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react-with-addons.min.js]",
+            "react-dom-server": "script[src=https://cdnjs.cloudflare.com/ajax/libs/react/15.0.2/react-dom-server.min.js]",
+            "react-basic": "react+react-dom+babel+script[type=text/babel][src]",
+            "doc": "html>(head>(meta[charset=UTF-8]+meta5+title{${1:title}}))+body",
+            "html:bs": "html>(head>(meta[charset=UTF-8]+meta5+title{${1:title}}+css:bs))+body>(.container{${1:bootstrap}}+jquery:v1+js:bs)",
+            "html:5": "!!!+doc[lang=${lang}]",
+            "html:react": "html>(head>(meta[charset=UTF-8]+meta5+title{${1:title}}+css:bs+react-basic))+body>(#myApp{${1:bootstrap}})",
+            "pre": "pre.prettyprint.linenums",
+            "pre:scroll": "pre.prettyprint.linenums.pre-scrollable",
+            "!bs": "!!!+doc:bs[lang=${lang}]",
+
+            "bs:btn": "button.btn.btn-default",
+            "bs:dropdown": ".dropdown>button.btn.btn-default.dropdown-toggle.trigger-dropdown[data-toggle=dropdown]{button}+ul.dropdown-menu[role=menu]>li>a[href=#]",
+
+            "bs:jumbotron": ".container>.jumbotron>h1",
+            "bs:jumbotron-full": ".jumbotron>.container>h1",
+
+            "bs:page-header": "(.page-header>(h1{page title}+small{subtitle}))+p>lorem10",
+
+            "bs:carousel-box": "#slideshow.carousel.slide[data-ride=carousel]",
+            "bs:carousel-inner": ".carousel-inner[role=listbox]>.item.active+.item",
+            "bs:carousel-inner-jumbo": ".carousel-inner[role=listbox]>(.item.active>bs:jumbotron-full)+(.item>bs:jumbotron-full)",
+            "bs:carousel-left-btn": "a.left.carousel-control[href=#slideshow][data-slide=prev]>span.glyphicon.glyphicon-chevron-left[aria-hidden=true]",
+            "bs:carousel-right-btn": "a.right.carousel-control[href=#slideshow][data-slide=next]>span.glyphicon.glyphicon-chevron-right[aria-hidden=true]",
+            "bs:carousel-control": ".control-btn>bs:carousel-left-btn+bs:carousel-right-btn",
+            "bs:carousel-indicators": "ol.carousel-indicators>(li[data-target=#slideshow][data-slide-to=0].active)+li[data-target=#slideshow][data-slide-to=1]",
+            "bs:carousel": "bs:carousel-box>bs:carousel-inner+bs:carousel-control+bs:carousel-indicators",
+            "bs:carousel-jumbo": "bs:carousel-box>bs:carousel-inner-jumbo+bs:carousel-control+bs:carousel-indicators",
+
+
+            "bs:breadcrumb": "ol.breadcrumb>(li>a[href=#]{parent}^+li.active>{current})",
+
+            "bs:nav-tabs": "ul.nav.nav-tabs>li.active>a[href=#tab1][data-toggle=tab]{#tab1}^^+.tab-content>(#tab1.active.tab-pane{#tab1}>p>lorem20)+(#tab2.tab-pane{#tab2}>p>lorem20)",
+            "bs:nav-pills": "ul.nav.nav-pills>li.active>a[href=#tab1][data-toggle=tab]{#tab1}^^+.tab-content>(#tab1.active.tab-pane{#tab1}>p>lorem20)+(#tab2.tab-pane{#tab2}>p>lorem20)",
+
+            "bs:navbar-rwd-btn": "button[type=button].navbar-toggle.collapsed[data-toggle=collapse][data-target=#menu-id][aria-expanded=false]>span.icon-bar*3",
+            "bs:navbar-header": ".navbar-header>a.navbar-brand[href=#]{brand}",
+            "bs:navbar-header-rwd": ".navbar-header>bs:navbar-rwd-btn+a.navbar-brand[href=#]{brand}",
+            "bs:navbar-menu-l": "ul.nav.navbar-nav>(li>a[href=#]{menu-item $})*3",
+            "bs:navbar-menu-r": "ul.nav.navbar-nav.navbar-right>(li>a[href=#]{menu-item $})*3",
+            "bs:navbar": "nav.navbar.navbar-default>bs:navbar-header+bs:navbar-menu-l",
+            "bs:navbar-rwd": "nav.navbar.navbar-default>bs:navbar-header-rwd+.collapse.navbar-collapse#menu-id>bs:navbar-menu-l",
+
+            "bs:page": "ul.pagination>(li>a[href=#]{1}^+li.active>span{2})",
+            "bs:pager": "ul.pager>(li.previous>a[href=#]{previous page}^+li.next>a[href=#]{next page})",
+            "bs:form": ".form-group>label.control-label+input:text.form-control+.help-block",
+            "bs:table": ".table-responsive>table.table.table-hover.table-striped.table-bordered>(thead>tr>th^^+tbody>tr>td)",
+            "bs:list": "ul.list-group>li.list-group-item",
+            "bs:lista": "div.list-group>a.list-group-item",
+            "bs:panel": ".panel.panel-default>(.panel-heading+.panel-body)",
+            "bs:paneltable": ".panel.panel-default>(.panel-heading+bs:table)",
+            "bs:panellist": ".panel.panel-default>(.panel-heading+.panel-body+bs:list)",
+            "bs:panellista": ".panel.panel-default>(.panel-heading+.panel-body+bs:lista)"
+        }
+    }
+}
